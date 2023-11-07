@@ -4,6 +4,8 @@
 
 #include <vector>
 
+
+
 enum Suit{Spade,Club,Heart,Diamond};
 
 struct Card{
@@ -16,7 +18,9 @@ public:
   Deck();
   void printCards() const;
   void shuffle();
-  void cardCombos();
+  void cardCombos() const;
+  std::vector<Card> getDeck() const;
+  Card getCard(int) const;
 private:
   std::vector<Card> _cards;
 };

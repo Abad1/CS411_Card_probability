@@ -54,7 +54,7 @@ void Deck::shuffle(){
   }
 }
 
-void Deck::cardCombos(){
+void Deck::cardCombos() const{
   int count = 0;
   for (int i = 0; i < (_cards.size()-2); i++){
     for(int j = i+1; j < (_cards.size()-1); j++){
@@ -65,4 +65,14 @@ void Deck::cardCombos(){
     }
   }
   cout << count;
+}
+
+std::vector<Card> Deck::getDeck() const
+{
+    return _cards;
+}
+
+Card Deck::getCard(int index) const
+{
+    return _cards[index];
 }
